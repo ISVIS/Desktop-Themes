@@ -1,0 +1,272 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes">
+    <Style x:Key="{x:Type themes:ControlChrome}"
+           TargetType="{x:Type themes:ControlChrome}">
+        <Setter Property="Focusable"
+                Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type themes:ControlChrome}">
+                    <Grid>
+                        <Border x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="1" />
+                        <Border x:Name="FocusedBorder"
+                                Background="{TemplateBinding FocusedBackground}"
+                                BorderBrush="{TemplateBinding FocusedBorderBrush}"
+                                BorderThickness="{TemplateBinding FocusedBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <Border x:Name="CheckedBorder"
+                                Background="{TemplateBinding CheckedBackground}"
+                                BorderBrush="{TemplateBinding CheckedBorderBrush}"
+                                BorderThickness="{TemplateBinding CheckedBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <Border x:Name="IndeterminateBorder"
+                                Background="{TemplateBinding IndeterminateBackground}"
+                                BorderBrush="{TemplateBinding IndeterminateBorderBrush}"
+                                BorderThickness="{TemplateBinding IndeterminateBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <Border x:Name="PointerOverBorder"
+                                Background="{TemplateBinding PointerOverBackground}"
+                                BorderBrush="{TemplateBinding PointerOverBorderBrush}"
+                                BorderThickness="{TemplateBinding PointerOverBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <Border x:Name="PressedBorder"
+                                Background="{TemplateBinding PressedBackground}"
+                                BorderBrush="{TemplateBinding PressedBorderBrush}"
+                                BorderThickness="{TemplateBinding PressedBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <Border x:Name="HighlightedBorder"
+                                Background="{TemplateBinding HighlightedBackground}"
+                                BorderBrush="{TemplateBinding HighlightedBorderBrush}"
+                                BorderThickness="{TemplateBinding HighlightedBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <Border x:Name="DisabledBorder"
+                                Background="{TemplateBinding DisabledBackground}"
+                                BorderBrush="{TemplateBinding DisabledBorderBrush}"
+                                BorderThickness="{TemplateBinding DisabledBorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Opacity="0" />
+                        <ContentPresenter x:Name="Presenter"
+                                          Focusable="False"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          ClipToBounds="{TemplateBinding ClipToBounds}"
+                                          Margin="{TemplateBinding Padding}"  />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="RenderFocus"
+                                 Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{Binding FocusedForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="FocusedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="FocusedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderPointerOver"
+                                 Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{Binding PointerOverForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PointerOverBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PointerOverBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderPointerOver"
+                                 Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{Binding PointerOverForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PointerOverBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PointerOverBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderHighlighted"
+                                 Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{Binding HighlightedForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="HighlightedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="HighlightedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderChecked"
+                                 Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{Binding CheckedForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="CheckedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="CheckedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderChecked"
+                                 Value="{x:Null}">
+                            <Setter Property="Foreground"
+                                    Value="{Binding IndeterminateForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="IndeterminateBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="IndeterminateBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderPressed"
+                                 Value="True">
+                            <Setter Property="Foreground"
+                                    Value="{Binding PressedForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PressedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="PressedBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="RenderEnabled"
+                                 Value="False">
+                            <Setter Property="Foreground"
+                                    Value="{Binding DisabledForeground, RelativeSource={RelativeSource Self}}" />
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="DisabledBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1"
+                                                         To="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="DisabledBorder"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.2"
+                                                         To="0" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

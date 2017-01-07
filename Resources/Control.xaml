@@ -1,0 +1,174 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Application.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Thickness x:Key="ControlBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="ControlPaddingThemeThickness">16,2,16,2</Thickness>
+    <CornerRadius x:Key="ControlBorderThemeCornerRadius">0,0,0,0</CornerRadius>
+
+    <Geometry x:Key="ControlLeftArrowThemeGeometry">M 5,0 L5,2 2,5 5,8 5,10 0,5 Z</Geometry>
+    <Geometry x:Key="ControlUpArrowThemeGeometry">M 5,0 L10,5 8,5 5,2 2,5 0,5 Z</Geometry>
+    <Geometry x:Key="ControlRightArrowThemeGeometry">M 0,0 L5,5 0,10 0,8 3,5 0,2 Z</Geometry>
+    <Geometry x:Key="ControlDownArrowThemeGeometry">M 0,0 L2,0 5,3 8,0 10,0 5,5 Z</Geometry>
+
+    <!-- Theme -->
+    <SolidColorBrush x:Key="ControlAccentThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationAccentThemeBrush}"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlAccentLowThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationAccentLowThemeBrush}"
+                     Opacity="0.6"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlAccentHighThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationAccentThemeBrush}"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlHighlightThemeBrush"
+                     Color="#FFFFFF90"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlLowThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationLowThemeBrush}"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlMiddleThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationMiddleThemeBrush}"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlHighThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationHighThemeBrush}"
+                     options:Freeze="True" />
+
+    <!-- Normal -->
+    <SolidColorBrush x:Key="ControlBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlLowThemeBrush}"
+                     options:Freeze="True" />
+
+    <!--<SolidColorBrush x:Key="ControlBorderThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighThemeBrush}"
+                     Opacity="0.2"
+                     options:Freeze="True" />-->
+
+    <!-- TODO: Alpha blend. -->
+    <SolidColorBrush x:Key="ControlBorderThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighThemeBrush}"
+                     Opacity="0.2"
+                     options:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlForegroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighThemeBrush}"
+                     options:Freeze="True" />
+
+    <!-- PointerOver -->
+    <SolidColorBrush x:Key="ControlPointerOverBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighThemeBrush}"
+                     Opacity="0.1"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlPointerOverBorderThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighThemeBrush}"
+                     Opacity="0.1"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlPointerOverForegroundThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+
+    <!-- Pressed -->
+    <SolidColorBrush x:Key="ControlPressedBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlAccentThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlPressedBorderThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlAccentThemeBrush}"
+                     Opacity="0.8"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlPressedForegroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlLowThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+
+    <!-- Focused -->
+    <SolidColorBrush x:Key="ControlFocusedBackgroundThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlFocusedBorderThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlAccentThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlFocusedForegroundThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+
+    <!-- Highlighted -->
+    <SolidColorBrush x:Key="ControlHighlightedBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighlightThemeBrush}"
+                     Opacity="0.4"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlHighlightedBorderThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlHighlightedForegroundThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+
+    <!-- Checked -->
+    <SolidColorBrush x:Key="ControlCheckedBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlAccentThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlCheckedBorderThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlCheckedForegroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlLowThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+
+    <!-- Indeterminate -->
+    <SolidColorBrush x:Key="ControlIndeterminateBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlAccentThemeBrush}"
+                     Opacity="0.6"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlIndeterminateBorderThemeBrush"
+                     Opacity="0.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlIndeterminateForegroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlHighThemeBrush}"
+                     Opacity="0.6"
+                     options:Freeze="True" />
+
+    <!-- Selected -->
+    <SolidColorBrush x:Key="ControlSelectedBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlAccentThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlSelectedBorderThemeBrush"
+                     Opacity="1.0"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ApplicationAccentThemeBrush}"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlSelectedForegroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlLowThemeBrush}"
+                     Opacity="1.0"
+                     options:Freeze="True" />
+
+
+    <!-- Disabled -->
+    <SolidColorBrush x:Key="ControlDisabledBackgroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlMiddleThemeBrush}"
+                     Opacity="0.1"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlDisabledBorderThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlMiddleThemeBrush}"
+                     Opacity="0.2"
+                     options:Freeze="True" />
+    <SolidColorBrush x:Key="ControlDisabledForegroundThemeBrush"
+                     themes:BasedOn.SolidColorBrush="{StaticResource ControlMiddleThemeBrush}"
+                     Opacity="0.4"
+                     options:Freeze="True" />
+</ResourceDictionary>

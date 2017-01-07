@@ -1,0 +1,98 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/Control.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="ControlStyle"
+           TargetType="{x:Type Control}">
+        <Setter Property="FocusVisualStyle"
+                Value="{x:Null}" />
+
+        <Setter Property="Background"
+                Value="{StaticResource ControlBackgroundThemeBrush}" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource ControlBorderThemeBrush}" />
+        <Setter Property="BorderThickness"
+                Value="{StaticResource ControlBorderThemeThickness}" />
+        <Setter Property="Foreground"
+                Value="{StaticResource ControlForegroundThemeBrush}" />
+
+        <Setter Property="themes:ControlTheme.BorderThickness"
+                Value="{StaticResource ControlBorderThemeThickness}" />
+        <Setter Property="themes:ControlTheme.CornerRadius"
+                Value="{StaticResource ControlBorderThemeCornerRadius}" />
+
+        <!-- Normal  -->
+        <Setter Property="themes:ControlTheme.NormalBackground"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=Background}" />
+        <Setter Property="themes:ControlTheme.NormalBorderBrush"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=BorderBrush}" />
+        <Setter Property="themes:ControlTheme.NormalForeground"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=Foreground}" />
+
+        <!-- Focused -->
+        <Setter Property="themes:ControlTheme.FocusedBackground"
+                Value="{StaticResource ControlFocusedBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.FocusedBorderBrush"
+                Value="{StaticResource ControlFocusedBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.FocusedForeground"
+                Value="{StaticResource ControlFocusedForegroundThemeBrush}" />
+
+        <!-- Highlighted -->
+        <Setter Property="themes:ControlTheme.HighlightedBackground"
+                Value="{StaticResource ControlHighlightedBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.HighlightedBorderBrush"
+                Value="{StaticResource ControlHighlightedBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.HighlightedForeground"
+                Value="{StaticResource ControlHighlightedForegroundThemeBrush}" />
+
+        <!-- PointerOver -->
+        <Setter Property="themes:ControlTheme.PointerOverBackground"
+                Value="{StaticResource ControlPointerOverBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.PointerOverBorderBrush"
+                Value="{StaticResource ControlPointerOverBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.PointerOverForeground"
+                Value="{StaticResource ControlPointerOverForegroundThemeBrush}" />
+
+        <!-- Pressed -->
+        <Setter Property="themes:ControlTheme.PressedBackground"
+                Value="{StaticResource ControlPressedBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.PressedBorderBrush"
+                Value="{StaticResource ControlPressedBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.PressedForeground"
+                Value="{StaticResource ControlPressedForegroundThemeBrush}" />
+
+        <!-- Selected -->
+        <Setter Property="themes:ControlTheme.SelectedBackground"
+                Value="{StaticResource ControlSelectedBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.SelectedBorderBrush"
+                Value="{StaticResource ControlSelectedBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.SelectedForeground"
+                Value="{StaticResource ControlSelectedForegroundThemeBrush}" />
+
+        <!-- Indeterminate -->
+        <Setter Property="themes:ControlTheme.IndeterminateBackground"
+                Value="{StaticResource ControlIndeterminateBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.IndeterminateBorderBrush"
+                Value="{StaticResource ControlIndeterminateBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.IndeterminateForeground"
+                Value="{StaticResource ControlIndeterminateForegroundThemeBrush}" />
+
+        <!-- Checked -->
+        <Setter Property="themes:ControlTheme.CheckedBackground"
+                Value="{StaticResource ControlCheckedBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.CheckedBorderBrush"
+                Value="{StaticResource ControlCheckedBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.CheckedForeground"
+                Value="{StaticResource ControlCheckedForegroundThemeBrush}" />
+
+        <!-- Disabled -->
+        <Setter Property="themes:ControlTheme.DisabledBackground"
+                Value="{StaticResource ControlDisabledBackgroundThemeBrush}" />
+        <Setter Property="themes:ControlTheme.DisabledBorderBrush"
+                Value="{StaticResource ControlDisabledBorderThemeBrush}" />
+        <Setter Property="themes:ControlTheme.DisabledForeground"
+                Value="{StaticResource ControlDisabledForegroundThemeBrush}" />
+    </Style>
+</ResourceDictionary>

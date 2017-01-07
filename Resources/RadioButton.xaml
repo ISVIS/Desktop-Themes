@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <Thickness x:Key="RadioButtonBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="RadioButtonMarginThemeThickness">0</Thickness>
+    <Thickness x:Key="RadioButtonPaddingThemeThickness">2</Thickness>
+    <Thickness x:Key="RadioButtonBulletPaddingThemeThickness">4</Thickness>
+    <system:Double x:Key="RadioButtonThemeWidth">15</system:Double>
+    <system:Double x:Key="RadioButtonThemeHeight">15</system:Double>
+</ResourceDictionary>

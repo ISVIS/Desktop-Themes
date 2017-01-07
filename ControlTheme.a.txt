@@ -1,0 +1,77 @@
+﻿Overrides	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesChanged)
+OverridesNormal	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesNormalChanged)
+OverridesFocused	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesFocusedChanged)
+OverridesHighlighted	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesHighlightedChanged)
+OverridesPointerOver	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesPointerOverChanged)
+OverridesPressed	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesPressedChanged)
+OverridesChecked	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesCheckedChanged)
+OverridesIndeterminate	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesIndeterminateChanged)
+OverridesDisabled	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesDisabledChanged)
+
+
+// TODO:
+Width	ControlTheme	double	Control
+Height	ControlTheme	double	Control
+Margin	ControlTheme	Thickness	Control
+Padding	ControlTheme	Thickness	Control
+
+IsHighlighted	ControlTheme	bool	Control
+
+// Derived
+IsPointerOver	ControlTheme	bool	Control
+IsFocused	ControlTheme	bool	Control
+IsPressed	ControlTheme	bool	Control
+IsChecked	ControlTheme	bool	Control
+IsIndeterminate	ControlTheme	bool	Control
+
+CornerRadius	ControlTheme	CornerRadius	Control
+
+Background	ControlTheme	Brush	Control	, new PropertyMetadata(OnBackgroundChanged)
+BorderBrush	ControlTheme	Brush	Control	, new PropertyMetadata(OnBorderBrushChanged)
+Foreground	ControlTheme	Brush	Control	, new PropertyMetadata(OnForegroundChanged)
+BorderThickness	ControlTheme	Thickness	Control
+
+NormalBackground	ControlTheme	Brush	Control
+NormalBorderBrush	ControlTheme	Brush	Control
+NormalBorderThickness	ControlTheme	Thickness	Control
+NormalForeground	ControlTheme	Brush	Control
+
+FocusedBackground	ControlTheme	Brush	Control
+FocusedBorderBrush	ControlTheme	Brush	Control
+FocusedBorderThickness	ControlTheme	Thickness	Control
+FocusedForeground	ControlTheme	Brush	Control
+
+HighlightedBackground	ControlTheme	Brush	Control
+HighlightedBorderBrush	ControlTheme	Brush	Control
+HighlightedBorderThickness	ControlTheme	Thickness	Control
+HighlightedForeground	ControlTheme	Brush	Control
+
+PointerOverBackground	ControlTheme	Brush	Control
+PointerOverBorderBrush	ControlTheme	Brush	Control
+PointerOverBorderThickness	ControlTheme	Thickness	Control
+PointerOverForeground	ControlTheme	Brush	Control
+
+PressedBackground	ControlTheme	Brush	Control
+PressedBorderBrush	ControlTheme	Brush	Control
+PressedBorderThickness	ControlTheme	Thickness	Control
+PressedForeground	ControlTheme	Brush	Control
+
+CheckedBackground	ControlTheme	Brush	Control
+CheckedBorderBrush	ControlTheme	Brush	Control
+CheckedBorderThickness	ControlTheme	Thickness	Control
+CheckedForeground	ControlTheme	Brush	Control
+
+IndeterminateBackground	ControlTheme	Brush	Control
+IndeterminateBorderBrush	ControlTheme	Brush	Control
+IndeterminateBorderThickness	ControlTheme	Thickness	Control
+IndeterminateForeground	ControlTheme	Brush	Control
+
+SelectedBackground	ControlTheme	Brush	Control
+SelectedBorderBrush	ControlTheme	Brush	Control
+SelectedBorderThickness	ControlTheme	Thickness	Control
+SelectedForeground	ControlTheme	Brush	Control
+
+DisabledBackground	ControlTheme	Brush	Control
+DisabledBorderBrush	ControlTheme	Brush	Control
+DisabledBorderThickness	ControlTheme	Thickness	Control
+DisabledForeground	ControlTheme	Brush	Control

@@ -1,0 +1,45 @@
+﻿
+Foreground	ControlChrome	Brush
+
+RenderFocused	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+RenderHighlighted	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+RenderPointerOver	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+RenderPressed	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+RenderChecked	ControlChrome	bool?	, new PropertyMetadata(false, OnPropertyChanged)
+RenderSelected	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+
+NormalBackground	ControlChrome	Brush
+NormalBorderBrush	ControlChrome	Brush
+NormalForeground	ControlChrome	Brush
+
+FocusedBackground	ControlChrome	Brush
+FocusedBorderBrush	ControlChrome	Brush
+FocusedForeground	ControlChrome	Brush
+
+HighlightedBackground	ControlChrome	Brush
+HighlightedBorderBrush	ControlChrome	Brush
+HighlightedForeground	ControlChrome	Brush
+
+PointerOverBackground	ControlChrome	Brush
+PointerOverBorderBrush	ControlChrome	Brush
+PointerOverForeground	ControlChrome	Brush
+
+PressedBackground	ControlChrome	Brush
+PressedBorderBrush	ControlChrome	Brush
+PressedForeground	ControlChrome	Brush
+
+CheckedBackground	ControlChrome	Brush
+CheckedBorderBrush	ControlChrome	Brush
+CheckedForeground	ControlChrome	Brush
+
+IndeterminateBackground	ControlChrome	Brush
+IndeterminateBorderBrush	ControlChrome	Brush
+IndeterminateForeground	ControlChrome	Brush
+
+SelectedBackground	ControlChrome	Brush
+SelectedBorderBrush	ControlChrome	Brush
+SelectedForeground	ControlChrome	Brush
+
+DisabledBackground	ControlChrome	Brush
+DisabledBorderBrush	ControlChrome	Brush
+DisabledForeground	ControlChrome	Brush

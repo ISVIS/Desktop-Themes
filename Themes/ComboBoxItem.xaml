@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/ComboBoxItem.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Styles/ComboBoxItem.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="{x:Type ComboBoxItem}"
+           TargetType="{x:Type ComboBoxItem}"
+           BasedOn="{StaticResource ComboBoxItemStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Grid>
+                        <themes:ControlChrome RenderPointerOver="{TemplateBinding IsMouseOver}"
+                                              RenderSelected="{TemplateBinding IsSelected}"
+                                              RenderHighlighted="{TemplateBinding themes:ControlTheme.IsHighlighted}"
+                                              RenderEnabled="{TemplateBinding IsEnabled}"
+
+                                              BorderThickness="{TemplateBinding themes:ControlTheme.BorderThickness}"
+                                              CornerRadius="{TemplateBinding themes:ControlTheme.CornerRadius}"
+
+                                              NormalBackground="{TemplateBinding themes:ControlTheme.NormalBackground}"
+                                              NormalBorderBrush="{TemplateBinding themes:ControlTheme.NormalBorderBrush}"
+                                              NormalForeground="{TemplateBinding themes:ControlTheme.NormalForeground}"
+
+                                              HighlightedBackground="{TemplateBinding themes:ControlTheme.HighlightedBackground}"
+                                              HighlightedBorderBrush="{TemplateBinding themes:ControlTheme.HighlightedBorderBrush}"
+                                              HighlightedForeground="{TemplateBinding themes:ControlTheme.HighlightedForeground}"
+
+                                              PointerOverBackground="{TemplateBinding themes:ControlTheme.PointerOverBackground}"
+                                              PointerOverBorderBrush="{TemplateBinding themes:ControlTheme.PointerOverBorderBrush}"
+                                              PointerOverForeground="{TemplateBinding themes:ControlTheme.PointerOverForeground}"
+
+                                              PressedBackground="{TemplateBinding themes:ControlTheme.PressedBackground}"
+                                              PressedBorderBrush="{TemplateBinding themes:ControlTheme.PressedBorderBrush}"
+                                              PressedForeground="{TemplateBinding themes:ControlTheme.PressedForeground}"
+
+                                              SelectedBackground="{TemplateBinding themes:ControlTheme.SelectedBackground}"
+                                              SelectedBorderBrush="{TemplateBinding themes:ControlTheme.SelectedBorderBrush}"
+                                              SelectedForeground="{TemplateBinding themes:ControlTheme.SelectedForeground}"
+
+                                              DisabledBackground="{TemplateBinding themes:ControlTheme.DisabledBackground}"
+                                              DisabledBorderBrush="{TemplateBinding themes:ControlTheme.DisabledBorderBrush}"
+                                              DisabledForeground="{TemplateBinding themes:ControlTheme.DisabledForeground}" />
+
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

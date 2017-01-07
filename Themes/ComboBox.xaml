@@ -1,0 +1,191 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/ComboBox.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Styles/ComboBox.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="{x:Type ComboBox}"
+           TargetType="{x:Type ComboBox}"
+           BasedOn="{StaticResource ComboBoxStyle}">
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility"
+                Value="Auto" />
+        <Setter Property="ClipToBounds"
+                Value="False" />
+
+        <Setter Property="Padding"
+                Value="{StaticResource ComboBoxPaddingThemeThickness}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+
+                    <Grid Name="MainGrid"
+                          SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Popup Name="PART_Popup"
+                               AllowsTransparency="True"
+                               Grid.ColumnSpan="2"
+                               Placement="Bottom"
+                               VerticalOffset="1"
+                               IsOpen="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                               PopupAnimation="{StaticResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}">
+                            <themes:ShadowChrome Margin="2">
+                                <Border x:Name="PopUpBorder"
+                                        MinWidth="{Binding ElementName=MainGrid, Path=ActualWidth}"
+                                        Background="{StaticResource ControlBackgroundThemeBrush}"
+                                        BorderBrush="{StaticResource ControlBorderThemeBrush}"
+                                        BorderThickness="{StaticResource ControlBorderThemeThickness}">
+                                    <!-- themes:ScrollViewer.HorizontalMargin="{StaticResource ListBoxScrollViewerHorizontalMarginThemeThickness}"
+                                         themes:ScrollViewer.VerticalMargin="{StaticResource ListBoxScrollViewerVerticalMarginThemeThickness}" -->
+                                    <ScrollViewer Foreground="{StaticResource ControlForegroundThemeBrush}"
+                                                  Padding="{StaticResource ComboBoxPopupPaddingThemeThickness}"
+                                                  CanContentScroll="True">
+                                        <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    </ScrollViewer>
+                                </Border>
+                            </themes:ShadowChrome>
+                        </Popup>
+                        <ToggleButton x:Name="Toggle"
+                                      Grid.Column="0"
+                                      Grid.ColumnSpan="2"
+                                      IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+
+                                      themes:ControlTheme.IsHighlighted="{TemplateBinding themes:ControlTheme.IsHighlighted}"
+
+                                      themes:ControlTheme.BorderThickness="{TemplateBinding themes:ControlTheme.BorderThickness}"
+                                      themes:ControlTheme.CornerRadius="{TemplateBinding themes:ControlTheme.CornerRadius}"
+
+                                      themes:ControlTheme.NormalBackground="{TemplateBinding themes:ControlTheme.NormalBackground}"
+                                      themes:ControlTheme.NormalBorderBrush="{TemplateBinding themes:ControlTheme.NormalBorderBrush}"
+                                      themes:ControlTheme.NormalForeground="{TemplateBinding themes:ControlTheme.NormalForeground}"
+
+                                      themes:ControlTheme.FocusedBackground="{TemplateBinding themes:ControlTheme.FocusedBackground}"
+                                      themes:ControlTheme.FocusedBorderBrush="{TemplateBinding themes:ControlTheme.FocusedBorderBrush}"
+                                      themes:ControlTheme.FocusedForeground="{TemplateBinding themes:ControlTheme.FocusedForeground}"
+
+                                      themes:ControlTheme.HighlightedBackground="{TemplateBinding themes:ControlTheme.HighlightedBackground}"
+                                      themes:ControlTheme.HighlightedBorderBrush="{TemplateBinding themes:ControlTheme.HighlightedBorderBrush}"
+                                      themes:ControlTheme.HighlightedForeground="{TemplateBinding themes:ControlTheme.HighlightedForeground}"
+
+                                      themes:ControlTheme.PointerOverBackground="{TemplateBinding themes:ControlTheme.PointerOverBackground}"
+                                      themes:ControlTheme.PointerOverBorderBrush="{TemplateBinding themes:ControlTheme.PointerOverBorderBrush}"
+                                      themes:ControlTheme.PointerOverForeground="{TemplateBinding themes:ControlTheme.PointerOverForeground}"
+
+                                      themes:ControlTheme.PressedBackground="{TemplateBinding themes:ControlTheme.PressedBackground}"
+                                      themes:ControlTheme.PressedBorderBrush="{TemplateBinding themes:ControlTheme.PressedBorderBrush}"
+                                      themes:ControlTheme.PressedForeground="{TemplateBinding themes:ControlTheme.PressedForeground}"
+
+                                      themes:ControlTheme.CheckedBackground="{TemplateBinding themes:ControlTheme.CheckedBackground}"
+                                      themes:ControlTheme.CheckedBorderBrush="{TemplateBinding themes:ControlTheme.CheckedBorderBrush}"
+                                      themes:ControlTheme.CheckedForeground="{TemplateBinding themes:ControlTheme.CheckedForeground}"
+
+                                      themes:ControlTheme.DisabledBackground="{TemplateBinding themes:ControlTheme.DisabledBackground}"
+                                      themes:ControlTheme.DisabledBorderBrush="{TemplateBinding themes:ControlTheme.DisabledBorderBrush}"
+                                      themes:ControlTheme.DisabledForeground="{TemplateBinding themes:ControlTheme.DisabledForeground}" />
+                        <Border Grid.Column="0"
+                                Margin="2,0,0,0">
+                            <ContentPresenter Name="PART_Content"
+                                              IsHitTestVisible="False"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                              ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              Margin="{TemplateBinding Padding}" />
+                        </Border>
+                        <TextBox Name="PART_EditableTextBox"
+                                 Grid.Column="0"
+                                 BorderThickness="0"
+                                 themes:Designer.IsActive="True"
+                                 themes:ControlTheme.BorderThickness="0"
+                                 AllowDrop="True"
+                                 FocusVisualStyle="{x:Null}"
+                                 IsReadOnly="{Binding Path=IsReadOnly, RelativeSource={RelativeSource TemplatedParent}}"
+                                 HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                 VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                 Padding="{TemplateBinding Padding}"
+                                 Margin="{TemplateBinding themes:ControlTheme.BorderThickness}"
+                                 IsHitTestVisible="False"
+                                 Visibility="Collapsed" />
+                        <Path Name="Arrow"
+                              Grid.Column="1"
+                              Fill="{Binding ElementName=Toggle, Path=Foreground}"
+                              Data="{StaticResource ComboBoxArrowThemeGeometry}"
+                              HorizontalAlignment="Right"
+                              VerticalAlignment="Center"
+                              IsHitTestVisible="False"
+                              Margin="5,0" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEditable"
+                                 Value="True">
+                            <Setter TargetName="PART_Content"
+                                    Property="Visibility"
+                                    Value="Collapsed" />
+                            <Setter TargetName="PART_EditableTextBox"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="HasItems"
+                                 Value="False">
+                            <Setter TargetName="PopUpBorder"
+                                    Property="Height"
+                                    Value="95" />
+                        </Trigger>
+                        <Trigger Property="IsGrouping"
+                                 Value="True">
+                            <Setter Property="ScrollViewer.CanContentScroll"
+                                    Value="False" />
+                        </Trigger>
+                        <Trigger SourceName="Toggle"
+                                 Property="ToggleButton.IsPressed"
+                                 Value="True">
+                            <Setter TargetName="PART_Content"
+                                    Property="IsHitTestVisible"
+                                    Value="True" />
+                            <Setter TargetName="PART_Content"
+                                    Property="TextBlock.Foreground"
+                                    Value="{Binding Path=(themes:ControlTheme.PressedForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="Arrow"
+                                    Property="Fill"
+                                    Value="{Binding Path=(themes:ControlTheme.PressedForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Trigger>
+                        <Trigger SourceName="Toggle"
+                                 Property="ToggleButton.IsChecked"
+                                 Value="True">
+                            <Setter TargetName="PART_Content"
+                                    Property="TextBlock.Foreground"
+                                    Value="{Binding Path=(themes:ControlTheme.CheckedForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="Arrow"
+                                    Property="Fill"
+                                    Value="{Binding Path=(themes:ControlTheme.CheckedForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Trigger>
+                        <Trigger SourceName="Toggle"
+                                 Property="ToggleButton.IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="PART_Content"
+                                    Property="TextBlock.Foreground"
+                                    Value="{Binding Path=(themes:ControlTheme.DisabledForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="PART_EditableTextBox"
+                                    Property="TextBlock.Foreground"
+                                    Value="{Binding Path=(themes:ControlTheme.DisabledForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Setter TargetName="Arrow"
+                                    Property="Fill"
+                                    Value="{Binding Path=(themes:ControlTheme.DisabledForeground), RelativeSource={RelativeSource TemplatedParent}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

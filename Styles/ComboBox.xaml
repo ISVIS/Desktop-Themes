@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/Control.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/ComboBox.xaml" />
+        <ResourceDictionary Source="Control.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="ComboBoxStyle"
+           TargetType="{x:Type Control}"
+           BasedOn="{StaticResource ControlStyle}" />
+</ResourceDictionary>

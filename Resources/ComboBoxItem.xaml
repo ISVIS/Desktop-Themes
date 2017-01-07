@@ -1,0 +1,7 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Thickness x:Key="ComboBoxItemBorderThemeThickness">1,1,1,1</Thickness>
+    <Thickness x:Key="ComboBoxItemPaddingThemeThickness">3,1,3,1</Thickness>
+    <Thickness x:Key="ComboBoxItemMarginThemeThickness">0,0,0,1</Thickness>
+    <CornerRadius x:Key="ComboBoxItemBorderThemeCornerRadius">0,0,0,0</CornerRadius>
+</ResourceDictionary>

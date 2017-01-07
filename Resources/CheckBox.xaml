@@ -1,0 +1,10 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <Thickness x:Key="CheckBoxPaddingThemeThickness">2</Thickness>
+    <Thickness x:Key="CheckBoxTickPaddingThemeThickness">3</Thickness>
+    <system:Double x:Key="CheckBoxThemeWidth">15</system:Double>
+    <system:Double x:Key="CheckBoxThemeHeight">15</system:Double>
+    <Geometry x:Key="CheckBoxTickThemeGeometry">F1 M 15,21L 22,28L 33,14L 36,17L 22,34L 12,24L 15,21 Z</Geometry>
+</ResourceDictionary>

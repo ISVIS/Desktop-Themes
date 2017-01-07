@@ -1,0 +1,20 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Isvis.Windows.Themes">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/Control.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Resources/RadioButton.xaml" />
+        <ResourceDictionary Source="Control.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="RadioButtonStyle"
+           TargetType="{x:Type Control}"
+           BasedOn="{StaticResource ControlStyle}">
+        <Setter Property="themes:ControlTheme.Width"
+                Value="{StaticResource RadioButtonThemeWidth}" />
+        <Setter Property="themes:ControlTheme.Height"
+                Value="{StaticResource RadioButtonThemeHeight}" />
+        <Setter Property="themes:ControlTheme.Padding"
+                Value="{StaticResource RadioButtonBulletPaddingThemeThickness}" />
+    </Style>
+</ResourceDictionary>

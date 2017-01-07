@@ -1,0 +1,15 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/Designer.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/Button.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/RadioButton.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/CheckBox.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/TextBox.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/PasswordBox.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/RichTextBox.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/Hyperlink.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/ComboBox.xaml" />
+        <ResourceDictionary Source="/Isvis.Windows.Themes;component/Themes/ComboBoxItem.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
