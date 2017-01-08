@@ -18,10 +18,10 @@
         <Setter Property="Foreground"
                 Value="{StaticResource ControlForegroundThemeBrush}" />
 
-        <Setter Property="themes:ControlTheme.BorderThickness"
-                Value="{StaticResource ControlBorderThemeThickness}" />
         <Setter Property="themes:ControlTheme.CornerRadius"
                 Value="{StaticResource ControlBorderThemeCornerRadius}" />
+        <Setter Property="themes:ControlTheme.BorderThickness"
+                Value="{Binding RelativeSource={RelativeSource Self}, Path=BorderThickness}" />
 
         <!-- Normal  -->
         <Setter Property="themes:ControlTheme.NormalBackground"
