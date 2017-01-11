@@ -44,10 +44,6 @@ namespace Isvis.Windows.Themes
             UpdateValue(d, DisabledForegroundProperty, e.NewValue);
         }
 
-        private static void OnBorderThicknessChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-        }
-
         private static void UpdateValue(DependencyObject d, DependencyProperty p, object v)
         {
             var element = (Control) d;
@@ -67,21 +63,6 @@ namespace Isvis.Windows.Themes
 
                 style = style.BasedOn;
             }
-
-            // TODO: Check local properties.
-            //if (d.ReadLocalValue(p) != DependencyProperty.UnsetValue)
-            //{
-            //    return;
-            //}
-
-            //var local = d.GetLocalValueEnumerator();
-            //while (local.MoveNext())
-            //{
-            //    var propertyToClear = local.Current.Property;
-            //    if (propertyToClear == p)
-            //    {
-            //    }
-            //}
 
             if (v == null)
             {

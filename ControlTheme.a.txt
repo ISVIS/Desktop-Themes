@@ -1,12 +1,6 @@
-﻿Width	ControlTheme	double	Control
-Height	ControlTheme	double	Control
-Margin	ControlTheme	Thickness	Control
-Padding	ControlTheme	Thickness	Control
-
-IsSelected	ControlTheme	bool	Control
+﻿IsSelected	ControlTheme	bool	Control
 IsHighlighted	ControlTheme	bool	Control
 
-Geometry	ControlTheme	Geometry	Control
 CornerRadius	ControlTheme	CornerRadius	Control
 BorderThickness	ControlTheme	Thickness	Control
 

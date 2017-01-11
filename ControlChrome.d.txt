@@ -1,12 +1,11 @@
-﻿
-Foreground	ControlChrome	Brush
-
-RenderFocused	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+﻿RenderFocused	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
 RenderHighlighted	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
 RenderPointerOver	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
 RenderPressed	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
 RenderChecked	ControlChrome	bool?	, new PropertyMetadata(false, OnPropertyChanged)
 RenderSelected	ControlChrome	bool	, new PropertyMetadata(OnPropertyChanged)
+
+Foreground	ControlChrome	Brush
 
 NormalBackground	ControlChrome	Brush
 NormalBorderBrush	ControlChrome	Brush

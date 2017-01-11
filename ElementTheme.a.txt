@@ -1,0 +1,6 @@
+﻿Width	ControlTheme	double	Control
+Height	ControlTheme	double	Control
+Margin	ControlTheme	Thickness	Control
+Padding	ControlTheme	Thickness	Control
+
+Geometry	ControlTheme	Geometry	Control
