@@ -17,7 +17,7 @@ namespace Isvis.Windows.Themes
         /// <summary>
         /// Gets the Geometry dependency property.
         /// </summary>
-        public static Geometry GetGeometry(Control element)
+        public static Geometry GetGeometry(FrameworkElement element)
         {
             return (Geometry) element.GetValue(GeometryProperty);
         }
@@ -25,7 +25,7 @@ namespace Isvis.Windows.Themes
         /// <summary>
         /// Sets the Geometry dependency property.
         /// </summary>
-        public static void SetGeometry(Control element, Geometry value)
+        public static void SetGeometry(FrameworkElement element, Geometry value)
         {
             element.SetValue(GeometryProperty, value);
         }

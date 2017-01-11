@@ -1,6 +1,6 @@
-﻿Width	ControlTheme	double	Control
-Height	ControlTheme	double	Control
-Margin	ControlTheme	Thickness	Control
-Padding	ControlTheme	Thickness	Control
+﻿Width	ControlTheme	double	FrameworkElement
+Height	ControlTheme	double	FrameworkElement
+Margin	ControlTheme	Thickness	FrameworkElement
+Padding	ControlTheme	Thickness	FrameworkElement
 
-Geometry	ControlTheme	Geometry	Control
+Geometry	ControlTheme	Geometry	FrameworkElement
