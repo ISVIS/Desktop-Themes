@@ -9,6 +9,12 @@ namespace Isvis.Windows.Themes
     public static partial class ControlTheme
     {
         /// <summary>
+        /// Identifies the Geometry dependency property.
+        /// </summary>
+        public static readonly DependencyProperty GeometryProperty = DependencyProperty.RegisterAttached("Geometry",
+            typeof (Geometry), typeof (ControlTheme));
+
+        /// <summary>
         /// Identifies the Background dependency property.
         /// </summary>
         public static readonly DependencyProperty BackgroundProperty = DependencyProperty.RegisterAttached(
@@ -230,6 +236,22 @@ namespace Isvis.Windows.Themes
         /// </summary>
         public static readonly DependencyProperty WidthProperty = DependencyProperty.RegisterAttached("Width",
             typeof (double), typeof (ControlTheme));
+
+        /// <summary>
+        /// Gets the Geometry dependency property.
+        /// </summary>
+        public static Geometry GetGeometry(Control element)
+        {
+            return (Geometry) element.GetValue(GeometryProperty);
+        }
+
+        /// <summary>
+        /// Sets the Geometry dependency property.
+        /// </summary>
+        public static void SetGeometry(Control element, Geometry value)
+        {
+            element.SetValue(GeometryProperty, value);
+        }
 
         /// <summary>
         /// Gets the Background dependency property.

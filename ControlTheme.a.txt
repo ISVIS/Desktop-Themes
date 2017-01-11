@@ -1,35 +1,18 @@
-﻿Overrides	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesChanged)
-OverridesNormal	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesNormalChanged)
-OverridesFocused	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesFocusedChanged)
-OverridesHighlighted	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesHighlightedChanged)
-OverridesPointerOver	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesPointerOverChanged)
-OverridesPressed	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesPressedChanged)
-OverridesChecked	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesCheckedChanged)
-OverridesIndeterminate	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesIndeterminateChanged)
-OverridesDisabled	ControlTheme	bool	Control	, new PropertyMetadata(OnOverridesDisabledChanged)
-
-
-// TODO:
-Width	ControlTheme	double	Control
+﻿Width	ControlTheme	double	Control
 Height	ControlTheme	double	Control
 Margin	ControlTheme	Thickness	Control
 Padding	ControlTheme	Thickness	Control
 
+IsSelected	ControlTheme	bool	Control
 IsHighlighted	ControlTheme	bool	Control
 
-// Derived
-IsPointerOver	ControlTheme	bool	Control
-IsFocused	ControlTheme	bool	Control
-IsPressed	ControlTheme	bool	Control
-IsChecked	ControlTheme	bool	Control
-IsIndeterminate	ControlTheme	bool	Control
-
+Geometry	ControlTheme	Geometry	Control
 CornerRadius	ControlTheme	CornerRadius	Control
+BorderThickness	ControlTheme	Thickness	Control
 
 Background	ControlTheme	Brush	Control	, new PropertyMetadata(OnBackgroundChanged)
 BorderBrush	ControlTheme	Brush	Control	, new PropertyMetadata(OnBorderBrushChanged)
 Foreground	ControlTheme	Brush	Control	, new PropertyMetadata(OnForegroundChanged)
-BorderThickness	ControlTheme	Thickness	Control
 
 NormalBackground	ControlTheme	Brush	Control
 NormalBorderBrush	ControlTheme	Brush	Control
